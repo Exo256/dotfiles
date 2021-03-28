@@ -1,0 +1,6 @@
+configuration {
+	modi: "drun,run,ssh";
+	theme: "~/.config/rofi/themes/breeze-dark.rasi";
+    show-icons: true;
+    terminal: "alacritty";
+}
