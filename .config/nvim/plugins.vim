@@ -14,6 +14,8 @@ call plug#begin('~/.config/nvim/plugged')
                 \ 'do': 'bash install.sh',
                 \ }
     Plug 'SirVer/ultisnips'
+    Plug 'roxma/nvim-yarp'
+    Plug 'ncm2/ncm2'
 call plug#end()
 
 " omnisharp-vim
@@ -40,3 +42,7 @@ let g:LanguageClient_autoStart = 1
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+" ncm2
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
