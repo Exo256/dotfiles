@@ -70,7 +70,7 @@ font-3 = "Font Awesome 5 Brands:style=Regular:size=8;1"
 
 modules-left = xwindow
 modules-center = bspwm
-modules-right = updates-pacman date
+modules-right = mullvad-status updates-pacman date
 
 tray-detached = false
 tray-offset-x = 0
@@ -129,6 +129,19 @@ interval = 30
 label-foreground = ${colors.background}
 label-background = #e95678
 label-padding = 1
+
+[module/mullvad-status]
+type = custom/script
+exec = ~/.config/polybar/scripts/mullvad.sh
+click-left = $HOME/.config/polybar/scripts/mullvad.sh --toggle-connection &
+click-right = $HOME/.config/polybar/scripts/mullvad.sh --location-menu &
+click-middle = $HOME/.config/polybar/scripts/mullvad.sh --ip-address &
+interval = 1
+
+label-foreground = ${colors.background}
+label-background = #89DAFB
+label-padding = 1
+
 
 [settings]
 screenchange-reload = true
