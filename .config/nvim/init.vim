@@ -1,8 +1,9 @@
 set autoindent                      " indent a new line the same amount as the line just typed
 set cc=120                          " set an 80 column border for good coding style
 set clipboard+=unnamedplus          " set clipboard to system
+set cursorline                      " adds a cursor line
 set encoding=utf8                   " utf8 encoding
-set expandtab                       " converts tabs to white space
+set noexpandtab                     " do not convert tabs to white space
 set hlsearch                        " highlight search results
 set ignorecase                      " Do case insensitive matching
 set linebreak                       " breaks line at word
@@ -19,6 +20,12 @@ set wildmode=longest,list           " get bash-like tab completions
 set list listchars=tab:——,trail:·
 set termguicolors
 set undofile
+set noswapfile
+set history=500
+
+" Set GNvim settings
+call gnvim#enable_ext_tabline(0)
+call gnvim#enable_ext_cmdline(0)
 
 " Python binary paths
 let g:python3_host_prog = '/usr/bin/python3'
