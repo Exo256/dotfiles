@@ -65,7 +65,7 @@ snippet date "Date" i
 `date +%F`
 endsnippet
 
-snippet beg "begin{} / end{}" b
+snippet "b(egin)?" "begin{} / end{}" br
 \begin{$1}
 	$0
 \end{$1}
@@ -98,21 +98,17 @@ endsnippet
 snippet si "Sub Item" bw
 \subitem{$1}$0
 endsnippet
-	
-snippet it "test" i
-\textit{$1}$0
+
+snippet "\#(.+)\#" "Bold" wr
+\textbf{`!p snip.rv = match.group(1)`}
 endsnippet
 
-snippet bf "Bold" i
-\textbf{$1}$0
+snippet "\*(.+)\*" "Emphasized" wr
+\emph{`!p snip.rv = match.group(1)`}
 endsnippet
 
-snippet em "Emphasized" i
-\emph{$1}$0
-endsnippet
-
-snippet ul "Underline" i
-\underline{$1}$0
+snippet "\_(.+)\_" "Underline" wr
+\underline{`!p snip.rv = match.group(1)`}
 endsnippet
 
 snippet pb "Page Break" i
@@ -126,7 +122,6 @@ endsnippet
 snippet cc "Short Cite" i
 \shortcite{$1}$0
 endsnippet
-
 
 
 # Math Snippets
@@ -180,7 +175,7 @@ snippet prod "Product" i
 endsnippet
 
 context "math()"
-snippet frac "Fraction" i
+snippet / "Fraction" i
 \frac{$1}{$2}$0
 endsnippet
 
@@ -269,7 +264,7 @@ snippet pmat "Parentheses Matrix" bwA
 endsnippet
 
 context "math()"
-snippet pw "Piecewise Cases" b
+snippet cases "Piecewise Cases" b
 \begin{cases}
 	$1
 \end{cases}$0
