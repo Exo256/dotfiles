@@ -126,3 +126,19 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# Multi-media Keys
+#
+
+# Play/Pause current media
+XF86AudioPlay
+    playerctl play-pause
+
+# Skip to the previous media
+XF86AudioPrev
+    playerctl previous
+
+# Skip to the next media
+XF86AudioNext
+    playerctl next
