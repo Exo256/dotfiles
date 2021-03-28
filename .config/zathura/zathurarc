@@ -1,6 +1,6 @@
 set recolor true
-set recolor-lightcolor  "#14161B"
-set recolor-darkcolor   "#FFFFFF"
+set recolor-lightcolor  "#1C1B19"
+set recolor-darkcolor   "#D0BFA1"
 set default-bg          "#14161B"
 set statusbar-bg        "#14161B"
 set font                "Hack 10"
