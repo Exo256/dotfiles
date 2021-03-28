@@ -1,5 +1,5 @@
 # Set defaults
-export EDITOR="nvim"
+export EDITOR="gnvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 
