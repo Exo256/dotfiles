@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'roxma/nvim-yarp'
     Plug 'ncm2/ncm2'
+    Plug 'preservim/nerdtree'
 call plug#end()
 
 " omnisharp-vim
