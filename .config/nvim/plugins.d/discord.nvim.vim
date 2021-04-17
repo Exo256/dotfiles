@@ -1,0 +1,1 @@
+Plug 'aurieh/discord.nvim'

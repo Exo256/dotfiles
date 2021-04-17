@@ -34,4 +34,10 @@ let g:python_host_prog = '/usr/bin/python2.7'
 " Load keybinds
 let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 execute 'source ' . s:path . '/keybinds.vim'
-execute 'source ' . s:path . '/plugins.vim'
+
+" Plugins
+call plug#begin('~/.config/nvim/plugged')
+    for f in split(glob('~/.config/nvim/plugins.d/*.vim'), '\n')
+        exe 'source' f
+    endfor
+call plug#end()
